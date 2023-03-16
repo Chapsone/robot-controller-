@@ -21,7 +21,7 @@ class controller(Node):
     def data_usage(self, msg : Twist):
 
         vx = msg.linear.x
-        vz = msg.linear.z
+        vz = msg.angular.z
 
         cmd = str(vx) + 'a' + str(vz) + 'e'
         ser.write(cmd.encode('utf-8'))
